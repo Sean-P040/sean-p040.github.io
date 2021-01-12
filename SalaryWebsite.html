@@ -1,0 +1,88 @@
+<html>
+
+
+<head>
+</head>
+<script>
+    function showAlert() {
+        window.alert("Please fill out the form below");
+    }
+
+</script>
+
+<body style="background-color: DarkGreen">
+    <title>Salary Calculator</title>
+
+
+
+    <body>
+
+        <style>
+            body {
+                color: aliceblue;
+
+            }
+
+            footer {
+                width: auto;
+                position: absolute;
+                bottom: 0;
+                margin: 1em;
+                
+
+            }
+
+        </style>
+        <h1>
+            <font color="white">
+                <div align="center">Gross Salary Calculator </div>
+        </h1>
+        <div align="center">
+            <h3> By: Sean Paul </h3>
+        </div>
+        </font>
+
+        <div align="middle">
+
+
+
+
+
+
+
+            Hourly Wage: <input type="number" id="hourlywage" value="0"><br>
+            Hours Per Week: <input type="number" id="hoursperweek" value="0"><br>
+            Additional Monthly Bonus in Dollars: <input type="number" id="benefits" value="0"><br>
+            <button onclick="calculate()">Calculate</button>
+        </div>
+
+        <script>
+            function calculate() {
+                var field1 = document.getElementById("hourlywage").value;
+                var field2 = document.getElementById("hoursperweek").value;
+                var field3 = document.getElementById("benefits").value;
+                var result = parseInt(field1) * parseInt(field2) * 52 + parseInt(field3) * 12;
+
+
+                document.getElementById("answer").innerHTML = "Your Annual Gross Salary is: $" + result;
+
+
+
+
+            }
+
+        </script>
+        <div align="center">
+            <h1 id="answer"></h1>
+        </div>
+        <div align="center">
+            <h1 id="result2"></h1>
+        </div>
+
+
+        <footer>
+            <hr>&#169; Copyright 2021 | Sean Paul
+        </footer>
+    </body>
+
+</html>
