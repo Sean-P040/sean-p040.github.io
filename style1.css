@@ -19,6 +19,7 @@
     h1#headerText {
         font-size: 3em;
     }
+
     h2#MyServices {
         margin-bottom: 5px;
     }
@@ -185,12 +186,13 @@
         display: block !important;
 
     }
-    section#MyServices li{
+
+    section#MyServices li {
         text-align: justify;
         list-style-position: inside;
-        
+
     }
-    
+
 
 }
 
@@ -364,22 +366,25 @@ ul#navBar.dark-mode img {}
 }
 
 section#MyServices {
-    display: flex;
+    display: block;
     justify-content: space-evenly;
 
 
 }
 
 h2#MyServices {
-    text-align: center;
+    text-align: left;
+
 }
 
 li.service {
     list-style: square;
     display: block;
     text-align: center;
+}
 
-
+#MyServices h3 {
+    text-shadow: 0 0 2px #FFFFFF;
 }
 
 a:link {
