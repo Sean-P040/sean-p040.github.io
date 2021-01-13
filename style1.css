@@ -723,3 +723,7 @@ section#MyServices li {
     font-family: sans-serif;
 
 }
+#copyright {
+    margin-top: 2px;
+    margin-bottom: 1%;
+}
