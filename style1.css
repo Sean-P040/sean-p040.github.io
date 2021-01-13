@@ -197,14 +197,15 @@
 }
 
 body {
-    
-    min-width: 768px;
+
+    min-width: 1080px;
     width: auto;
-    margin: 1em 1.25em .5em 1.25em;
-    padding-left: 10em;
-    padding-right: 10em;
+    margin: auto;
+    padding-left: 2%;
+    padding-right: 2%;
     background-color: rgb(27, 38, 90);
     color: #FFE9AA;
+    max-width: min-content;
 
 }
 
@@ -234,7 +235,15 @@ h1 {
 
 h2 {
     font-family: serif;
+    margin-bottom: 0px;
 
+
+}
+
+#resume {
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 3em;
 }
 
 #landingText {
@@ -243,7 +252,7 @@ h2 {
 
 }
 
-.MyStory {}
+.MyStory p {}
 
 body.dark-mode {
     background-color: #F3F2F5;
@@ -373,8 +382,14 @@ section#MyServices {
 
 }
 
+section#MyWork {
+    padding-top: 1em;
+}
+
 h2#MyServices {
     text-align: left;
+    margin-top: 1em;
+
 
 }
 
@@ -386,6 +401,13 @@ li.service {
 
 #MyServices h3 {
     text-shadow: 0 0 2px #FFFFFF;
+    margin-bottom: 6px;
+
+}
+
+#MyServices ul {
+    margin-top: 0px;
+    padding-left: 2%;
 }
 
 a:link {
@@ -578,6 +600,7 @@ input#email {
     /* White text color */
 }
 
+
 section#skills p {
     margin-bottom: 2px;
     margin-top: 2px;
@@ -622,6 +645,7 @@ section#skills p {
 
 h2#skills {
     text-align: center;
+    margin-bottom: 0px;
 }
 
 /* Testing
@@ -683,16 +707,19 @@ section {
 }
 
 p {
-    font-family:sans-serif;
+    font-family: sans-serif;
+
+    text-align: left;
+
 }
 
 h3#landingText {
     font-size: xx-large;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
     font-family: sans-serif;
 }
 
-section#MyServices li{
+section#MyServices li {
     font-family: sans-serif;
-}
 
+}
