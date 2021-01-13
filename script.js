@@ -9,4 +9,19 @@ function darkMode() {
 
 }
 
+var today = new Date();
+var time = today.getHours();
+var greet;
 
+if (time > 18) {
+  greet = 'Good evening,';
+} else if (time > 12) {
+  greet = 'Good afternoon,';
+} else if (time >= 0) {
+  greet = 'Good morning,';
+} else {
+  greet = 'Greetings,';
+}
+
+var show = document.getElementById('greetMessage');
+show.textContent = greet;
