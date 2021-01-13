@@ -197,6 +197,7 @@
 }
 
 body {
+    
     min-width: 768px;
     width: auto;
     margin: 1em 1.25em .5em 1.25em;
@@ -680,3 +681,18 @@ section {
     animation-duration: 8s;
     top: 90%;
 }
+
+p {
+    font-family:sans-serif;
+}
+
+h3#landingText {
+    font-size: xx-large;
+    margin-bottom: 8px;
+    font-family: sans-serif;
+}
+
+section#MyServices li{
+    font-family: sans-serif;
+}
+
