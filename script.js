@@ -13,7 +13,7 @@ var today = new Date();
 var time = today.getHours();
 var greet;
 
-if (time > 18) {
+if (time > 16) {
   greet = 'Good evening,';
 } else if (time > 12) {
   greet = 'Good afternoon,';
