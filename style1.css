@@ -433,6 +433,10 @@ a:hover {
 
 }
 
+img.center {
+    transform: scale(.75);
+}
+
 
 
 header {
