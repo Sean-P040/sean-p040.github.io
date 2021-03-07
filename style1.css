@@ -203,7 +203,7 @@ body {
     margin: auto;
     padding-left: 2%;
     padding-right: 2%;
-    background-color: rgb(27, 38, 90);
+    background-color: rgb(27, 38, 115);
     color: #FFE9AA;
     max-width: min-content;
 
@@ -639,7 +639,7 @@ section#skills p {
 
 /* Red */
 .py {
-    width: 50%;
+    width: 75%;
     background-color: darkviolet;
 }
 
