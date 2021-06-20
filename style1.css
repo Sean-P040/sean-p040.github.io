@@ -264,6 +264,11 @@ h1.dark-mode {
     color: #2E215B;
     text-shadow: 1px 1px rgb(130, 120, 164);
 }
+h2.dark-mode {
+    color: #2E215B;
+    text-shadow: 1px 1px rgb(130, 120, 164);
+}
+
 
 
 .switch {
