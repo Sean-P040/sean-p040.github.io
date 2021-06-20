@@ -1,0 +1,110 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <title>Sean's Web Portfolio</title>
+        <script type="text/javascript" src="script.js">
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=100%">
+        <link rel="stylesheet" href="style1.css">
+    </head>
+</head>
+
+<body>
+  <script src="scripts.js"></script>
+  <nav class="nav">
+    <ul id="navBar">
+        <li><a href=index.html>Home</a></li>
+        <li><a href=index.html#MyWork>My Work</a></li>
+        <li><a href=index.html#MyServices>My Services</a></li>
+        <li><a href=index.html#footer>Contact Me</a></li>
+        <li class="switch">
+
+            <img src="images/Sun.png" class="switchMoon">
+
+            <label class="switch">
+                <input type="checkbox" class="dark-mode" onClick="JavaScript:darkMode()" checked>
+                <span class="slider round"></span>
+
+                <img src="images/moon2.png" class="switchSun">
+
+            </label>
+        </li>
+    </ul>
+</nav>
+<!-- My Story -->
+<section id="MyStory" class="MyStory">
+    <h3 id="landingText">A Brief Introduction About Me</h3>
+    <img src="images/Professional_Headshot.jpg" class="center">
+    <h2>My Story</h2>
+    
+    <p><span id="greetMessage">Greetings,</span> thank you for visiting my personal website! I am a tech enthusiast born and raised in the beautiful county of St. Louis, MO. Growing up amidst the transition into a new millennium, deemed as the "Information Age" by many, I quickly gained interest in the latest and greatest technological inventions. During the initial stages of my academic career, I gravitated towards specializing in business administration. However, it was not long before I became aware of the unique Information Systems &#38; Technology Bachelor's degree program, offered at UMSL. The IS program offers the best of both worlds in terms of my interests; A foundation in both the functional areas of business and in computing technologies. I immediately enrolled into this program in the Fall of 2019.</p>
+
+    <p>
+        Fast forward two years&#8211; I just recently graduated this Spring. I would describe myself as a person possessing an inquisitive and analytical mind, with a burning desire to acquire new knowledge. My specialty is in utilizing computer systems and innovative technical solutions to solve various business challenges. Right now, I am seeking an opportunity that will provide a professional experience, in which I can showcase these skills in a real-world setting.</p>
+        <!-- My Interests -->
+<section id="MyInterests">
+    <h2>My Interests</h2>
+    <p>I love learning new things, especially related to technology! When I am not working on a project or learning a new language, I will most likely be outdoors enjoying nature and/or exercising.
+        One of my long-term goals has been to acquire the knowledge and skills appropriate to provide others with beneficial services. As my capabilities and level of understanding of various topics progresses, I realize I am stepping closer to achieving this goal.
+    </p>
+</section>
+   <!-- Footer Section -->
+   <footer id="footer">
+    <h3 id="footerMsg">Short on time? Send me a quick message:</h3>
+    <form method="POST" class="contactForm" action="https://formspree.io/f/xqkgwjal">
+        <fieldset>
+            <Legend>Contact</Legend>
+            <div>
+                <label for="subject" id="subject">Subject:</label>
+                <select name="subject" id="subject">
+                    <option value="Opportunity" selected>Opportunity</option>
+                    <option value="Comment">Comment</option>
+                    <option value="Question">Question</option>
+                    <option value="Hello">Say Hello</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="name" id="name">Name:</label>
+                <input type="text" id="name" name="userName" required>
+            </div>
+            <div>
+                <label for="email" id="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="tel" id="tel">Phone #:</label>
+                <input type="tel" id="tel" name="tel" placeholder="Optional">
+            </div>
+            <div>
+                <label for="message" id="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="40" maxlength="400" required placeholder="Hi, I wanted to contact you about this opportunity..."></textarea>
+                <br>
+            </div>
+            <div>
+                <input type="submit" class="submit" value="Send" onclick="alert('Thank you! You will be redirected shortly and your message will be sent after passing the security check.')">
+                <script src="script.js"></script>
+            </div>
+        </fieldset>
+    </form>
+
+    <p></p>
+    <div class="footerIcons">
+        <a href="mailto:sean_p040@yahoo.com">
+            <img src="images/mailicon.webp" height="32px" width="32px">
+        </a>
+        <a href="https://www.linkedin.com/in/seanpaul4" target="_blank">
+            <img src="images/linkedin.png" height="32px" width="32px">
+        </a>
+        <a href=#navBar>
+            <img src=images/up.png id="upArrow">
+        </a>
+    </div>
+    <hr>
+    <p id="copyright">&#169; by Sean Paul | Copyright 2021 | </p>
+</footer>
+</body>
+
+</html>
