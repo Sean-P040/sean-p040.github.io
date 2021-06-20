@@ -7,6 +7,7 @@ function darkMode() {
     element.classList.toggle("dark-mode");
     element2.classList.toggle("dark-mode");
     element3.classList.toggle("dark-mode");
+
     element4.classList.toggle("dark-mode");
 
 }
@@ -14,7 +15,7 @@ function darkMode() {
 
 var today = new Date();
 var time = today.getHours();
-var greet;
+var greet = "Greetings,'";
 
 if (time > 16) {
   greet = 'Good evening,';
@@ -27,4 +28,9 @@ if (time > 16) {
 }
 
 var show = document.getElementById('greetMessage');
+
+if(show.classList = ""){
+//do nothing if null
+} else {
 show.textContent = greet;
+}

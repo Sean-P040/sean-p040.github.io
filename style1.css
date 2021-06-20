@@ -13,8 +13,10 @@
         min-width: auto !important;
         margin-top: .5% !important;
         overflow-x: hidden;
+        line-height: 2rem;
 
     }
+ 
 
     h1#headerText {
         font-size: 2.5em;
@@ -42,13 +44,13 @@
 
     section#MyServices {
         font-size: 1.5em;
-
+        line-height: 2rem;
     }
 
     body p {
         font-size: 1.75em;
         width: auto;
-        line-height: 10px;
+        line-height: 2rem;
 
     }
 
@@ -260,6 +262,11 @@ body.dark-mode {
     color: #2E245B;
 }
 
+body.dark-mode h1{
+    color: #2E215B;
+    text-shadow: 1px 1px rgb(130, 120, 164);
+}
+
 h1.dark-mode {
     color: #2E215B;
     text-shadow: 1px 1px rgb(130, 120, 164);
@@ -421,7 +428,7 @@ a:link {
 }
 
 a:visited {
-    color: rgb(170, 142, 57);
+    color: rgba(255, 232, 170, 0.849);
 }
 
 a:hover {
