@@ -3,9 +3,11 @@ function darkMode() {
     var element = document.body;
     var element2 = document.getElementById("headerText");
     var element3 = document.getElementById("navBar");
+    var element4 = document.getElementById("landingText");
     element.classList.toggle("dark-mode");
     element2.classList.toggle("dark-mode");
     element3.classList.toggle("dark-mode");
+    element4.classList.toggle("dark-mode");
 
 }
 
