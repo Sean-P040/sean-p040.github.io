@@ -9,6 +9,7 @@ function darkMode() {
 
 }
 
+
 var today = new Date();
 var time = today.getHours();
 var greet;
