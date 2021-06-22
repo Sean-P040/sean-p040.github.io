@@ -79,6 +79,7 @@
         width: 100%;
         text-align: center;
         padding-right: 20px;
+        
     }
 
     ul#navBar {
@@ -234,6 +235,7 @@ h1 {
     text-shadow: 1px 1px rgb(255, 233, 170);
     color: #FFE9AA;
     white-space: nowrap;
+    margin-top:50px;
 
 }
 
@@ -396,7 +398,8 @@ ul#navBar.dark-mode a {
 ul#navBar.dark-mode img {}
 
 .nav a {
-    text-decoration: none;
+    text-decoration: underline;
+    font-size: smaller;
 
 
 }
