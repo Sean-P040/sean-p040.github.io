@@ -4,10 +4,13 @@ function darkMode() {
     var element2 = document.getElementById("headerText");
     var element3 = document.getElementById("navBar");
     var element4 = document.getElementById("landingText");
+    var animationElement = document.getElementById("animation")
+    var animationElement2 = document.getElementById("animation2")
     element.classList.toggle("dark-mode");
     element2.classList.toggle("dark-mode");
     element3.classList.toggle("dark-mode");
-
+    animationElement.classList.toggle("dark-mode");
+    animationElement2.classList.toggle("dark-mode");
     element4.classList.toggle("dark-mode");
 
 }
