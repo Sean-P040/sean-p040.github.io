@@ -850,6 +850,7 @@ section#MyServices li {
   position: absolute;
   top: 0;
   right: 0;
+  max-width: 50px;
 }
 
 /* The dots/bullets/indicators */
