@@ -200,6 +200,10 @@
 
 
 }
+ul#navBar a{
+    color:#fff2d0 ;
+}
+
 
 body {
     line-height: 20px;
@@ -891,6 +895,3 @@ section#MyServices li {
   to {opacity: 1}
 }
 
-.navBar-link {
-    color:#fff6dd !important;
-}

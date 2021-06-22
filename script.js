@@ -13,6 +13,7 @@ function darkMode() {
     animationElement2.classList.toggle("dark-mode");
     element4.classList.toggle("dark-mode");
 
+
 }
 
 
