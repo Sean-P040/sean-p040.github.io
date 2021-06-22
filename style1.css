@@ -890,3 +890,7 @@ section#MyServices li {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.navBar-link {
+    color:#fff6dd !important;
+}
