@@ -111,3 +111,17 @@ function showSlides(n) {
 }  catch (error) {
   console.log(error, "Slideshow");
 }
+
+//show or hide 'to top' button
+
+window.onscroll = function()
+{
+  var pageOffset = document.documentElement.scrollTop || document.body.scrollTop;
+    if(pageOffset > 0)
+    {
+        document.getElementById('upArrow').style.visibility="visible";
+    }else if (pageOffset <= 0)
+    {
+        document.getElementById('upArrow').style.visibility="hidden";
+    }
+};
