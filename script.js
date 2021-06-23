@@ -31,7 +31,7 @@ function slideShowCycle (e) {
     || document.location.href == 'https://sean-p040.github.io/MyWork.html' && e.keyCode == '39'
     || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '39'){ 
     //right arrow key -> next slide
-    plusSlides(0)
+    plusSlides(1)
    
   }
 }
