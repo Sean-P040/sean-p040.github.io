@@ -23,7 +23,6 @@ function slideShowCycle (e) {
    || document.location.href == 'https://sean-p040.github.io/MyWork.html' 
    || document.location.href == 'https://sean-p040.github.io/index.html#footer'){
     //left arrow -> prev slide
-    
     plusSlides(-1)
   }
   else if (e.keyCode == '39' && document.location.href == 'http://127.0.0.1:8080/'
@@ -32,7 +31,7 @@ function slideShowCycle (e) {
     || document.location.href == 'https://sean-p040.github.io/MyWork.html' 
     || document.location.href == 'https://sean-p040.github.io/index.html#footer'){
     //right arrow -> next slide
-    plusSlides(1)
+    plusSlides(0)
    
   }
 }
