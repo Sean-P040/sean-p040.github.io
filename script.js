@@ -77,7 +77,7 @@ function showSlidesAuto() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlidesAuto, 7500); // Change image every 7.5 seconds
+  setTimeout(showSlidesAuto, 10000); // Change image every 10 seconds
   plusSlides(0)
 }
 
