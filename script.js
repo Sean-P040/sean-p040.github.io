@@ -2,7 +2,7 @@ function darkMode() {
     "use strict";
     var element = document.body;
     var element2 = document.getElementById("headerText");
-    var element3 = document.getElementById("navBar");
+    var element3 = document.getElementById("navBar"); 
     var element4 = document.getElementById("landingText");
     var animationElement = document.getElementById("animation")
     var animationElement2 = document.getElementById("animation2")
@@ -32,13 +32,17 @@ if (time > 16) {
 }
 
 var show = document.getElementById('greetMessage');
-
-if(show.classList = ""){
+try{
+if(show.classList == null){
 //do nothing if null
 } else {
 show.textContent = greet;
 }
+} catch (e) {
+  console.log(e, "Greeting")
+}
 
+try {
 var slideIndex = 0;
 showSlidesAuto();
 
@@ -83,4 +87,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+}  catch (error) {
+  console.log(error, "Slideshow");
 }
