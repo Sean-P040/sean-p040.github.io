@@ -125,3 +125,46 @@ window.onscroll = function()
         document.getElementById('upArrow').style.visibility="hidden";
     }
 };
+
+function calculateBMI(){
+ const formValues = document.querySelectorAll('#bmi-calculator input')
+ const valuesArray = [];
+/*  console.log(formValues[0].value, formValues[1].value) */
+ for (let i=0;i<formValues.length;i++){
+   console.log(formValues[i].value)
+   valuesArray.push(formValues[i].value)
+ }
+
+ if(valuesArray[0] == ""|| valuesArray[1] == ""){
+   alert("Please fill out all fields to calculate your BMI")
+ } else if (valuesArray[0] <= 100 && valuesArray[0] > 0 &&  valuesArray[1] <= 400 && valuesArray[1] > 0) {
+  console.log(valuesArray)
+  const result = document.getElementById("bmi-result")
+  result.innerHTML = "Your BMI is: " + ((parseFloat(valuesArray[1]) / parseFloat(valuesArray[0])) /  parseFloat(valuesArray[0]) * 703).toFixed(2)
+  const calculatedBMI = ((parseFloat(valuesArray[1]) / parseFloat(valuesArray[0])) /  parseFloat(valuesArray[0]) * 703).toFixed(2)
+  const bmiFooterText = document.getElementById('form-footer')
+  bmiFooterText.innerHTML = BmiRange(calculatedBMI);
+
+ } else {
+   alert("Please enter valid, non-negative, numbers for your height and weight. \n\nHeight must be less than 100 inches and Weight must be less than 400 pounds.")
+ }
+} 
+
+function BmiRange(calculatedBMI) {
+       
+  if (calculatedBMI < 18.5){
+    document.getElementById("form-footer").style.color = "red";
+    return "Your BMI falls within the underweight range"
+  } else if (calculatedBMI >= 18.5 && calculatedBMI < 25){
+    document.getElementById("form-footer").style.color = "green";
+    return "Your BMI falls within the healthy weight range"
+  }
+  else if (calculatedBMI >= 25 && calculatedBMI < 30){
+    document.getElementById("form-footer").style.color = "orange";
+    return "Your BMI falls within the overweight range"
+  }
+  else if (calculatedBMI > 30){
+    document.getElementById("form-footer").style.color = "red";
+    return "Your BMI falls within the obesity range"
+  }
+}

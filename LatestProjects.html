@@ -45,6 +45,31 @@
         If you have any project/program ideas, feel free to send me a message!
     </p>
 </section>
+
+
+ <!-- BMI Calculator-->
+<section>
+    <br>
+<h2 style="text-align: center; margin-bottom: 5px;">Simple Body Mass Index (BMI) Calculator</h2>
+<div class="BMI-container">
+    <form id="bmi-calculator">
+        <label>Height (in)</label>
+        <br>
+        <input id="bmi-height" type="number" max="100" min="0">
+        <br>
+        <label>Weight (lbs)</label>
+        <br>
+        <input id="bmi-weight" type="number" max="400" min="0">
+        <br>
+    </form>
+    <br>
+        <button style="margin-bottom: 15px" value="Submit" onclick="calculateBMI()">Calculate My BMI</button>
+ 
+    <h2 id="bmi-result"></h2>
+    <h2 id="form-footer"></h2>
+    <a href="https://www.cdc.gov/obesity/adult/defining.html" target="_blank"><p style="bottom: 0; left: 2px; position: absolute; margin: 0 auto; font-size: xx-small; color: rgba(0, 0, 0, 0.486)">Classification Reference: https://www.cdc.gov/obesity/adult/defining.html</p></a>
+</div>
+</section>
    <!-- Footer Section -->
    <footer id="footer">
     <h3 id="footerMsg" style="margin-top: 10em;">Short on time? Send me a quick message:</h3>

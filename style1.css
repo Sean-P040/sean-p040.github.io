@@ -178,6 +178,22 @@
 
     h2 {
         font-size: 2.5em;
+        line-height:1;
+    }
+
+    div.BMI-container{
+        width: 90%;
+        height: 400px;
+    }
+
+    div.BMI-container label{
+        font-size: x-large;
+        margin-bottom:10px;
+    }
+
+    div.BMI-container input {
+        margin-top:5px;
+        margin-bottom:5px;
     }
 
     #copyright {
@@ -925,3 +941,15 @@ section#MyServices li {
   to {opacity: 1}
 }
 
+.BMI-container {
+    background-color:aliceblue;
+    border: 3px solid black;
+    height:300px;
+    width:400px;
+    margin: 0 auto;
+    color:black;
+    display:block;
+    position: relative;
+    text-align: center;
+    padding-top:5px;
+}
