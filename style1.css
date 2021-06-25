@@ -942,8 +942,8 @@ section#MyServices li {
 }
 
 .BMI-container {
-    background-color:aliceblue;
-    border: 3px solid black;
+    background-image: url(/images/bmiCalcBg2.png);
+    border: 2px solid black;
     height:300px;
     width:400px;
     margin: 0 auto;
@@ -952,4 +952,45 @@ section#MyServices li {
     position: relative;
     text-align: center;
     padding-top:5px;
+}
+
+.BMI-container#bg {
+ 
+}
+
+.BMI-container label{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0 5px;
+    font-weight: 700;
+}
+
+h1#form-footer{
+font-size: 28px;
+animation:none;
+white-space: normal;
+line-height: 1;
+margin-top: 15px;
+text-shadow: 1px 1px black;
+}
+
+h2#bmi-result {
+    text-shadow: 1px 1px rgba(255,255,255,.75);
+}
+
+.bmi-button {
+background-color: white;
+color: black;
+border: 2px solid #444444;
+}
+.bmi-button:hover {
+background-color: rgba(0,0,0,.5);
+color: white;
+}
+
+.BMI-container input{
+    width: 20%;
+    font-size:x-large;
+    margin-bottom: 8px;
+    margin-top: 1px;
+    background: aliceblue;
 }

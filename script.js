@@ -21,7 +21,8 @@ function slideShowCycle (e) {
    || document.location.href == 'https://sean-p040.github.io/' && e.keyCode == '37'
    || document.location.href == 'https://sean-p040.github.io/index.html' && e.keyCode == '37'
    || document.location.href == 'https://sean-p040.github.io/MyWork.html'  && e.keyCode == '37'
-   || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '37'){
+   || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '37'
+   || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '37'){
     //left arrow key -> prev slide
     plusSlides(-1)
   }
@@ -29,7 +30,8 @@ function slideShowCycle (e) {
     || document.location.href == 'https://sean-p040.github.io/' && e.keyCode == '39'
     || document.location.href == 'https://sean-p040.github.io/index.html' && e.keyCode == '39'
     || document.location.href == 'https://sean-p040.github.io/MyWork.html' && e.keyCode == '39'
-    || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '39'){ 
+    || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '39'
+    || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '37'){ 
     //right arrow key -> next slide
     plusSlides(1)
    
@@ -129,16 +131,16 @@ window.onscroll = function()
 function calculateBMI(){
  const formValues = document.querySelectorAll('#bmi-calculator input')
  const valuesArray = [];
-/*  console.log(formValues[0].value, formValues[1].value) */
+
  for (let i=0;i<formValues.length;i++){
-   console.log(formValues[i].value)
+
    valuesArray.push(formValues[i].value)
  }
 
  if(valuesArray[0] == ""|| valuesArray[1] == ""){
    alert("Please fill out all fields to calculate your BMI")
  } else if (valuesArray[0] <= 100 && valuesArray[0] > 0 &&  valuesArray[1] <= 400 && valuesArray[1] > 0) {
-  console.log(valuesArray)
+
   const result = document.getElementById("bmi-result")
   result.innerHTML = "Your BMI is: " + ((parseFloat(valuesArray[1]) / parseFloat(valuesArray[0])) /  parseFloat(valuesArray[0]) * 703).toFixed(2)
   const calculatedBMI = ((parseFloat(valuesArray[1]) / parseFloat(valuesArray[0])) /  parseFloat(valuesArray[0]) * 703).toFixed(2)
@@ -154,13 +156,17 @@ function BmiRange(calculatedBMI) {
        
   if (calculatedBMI < 18.5){
     document.getElementById("form-footer").style.color = "red";
+   
+
     return "Your BMI falls within the underweight range"
   } else if (calculatedBMI >= 18.5 && calculatedBMI < 25){
     document.getElementById("form-footer").style.color = "green";
+
     return "Your BMI falls within the healthy weight range"
   }
   else if (calculatedBMI >= 25 && calculatedBMI < 30){
     document.getElementById("form-footer").style.color = "orange";
+ 
     return "Your BMI falls within the overweight range"
   }
   else if (calculatedBMI > 30){

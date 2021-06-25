@@ -51,23 +51,22 @@
 <section>
     <br>
 <h2 style="text-align: center; margin-bottom: 5px;">Simple Body Mass Index (BMI) Calculator</h2>
-<div class="BMI-container">
+<div class="BMI-container" id="bg">
     <form id="bmi-calculator">
         <label>Height (in)</label>
         <br>
-        <input id="bmi-height" type="number" max="100" min="0">
+        <input id="bmi-height" type="number" max="100" min="0" placeholder="0">
         <br>
         <label>Weight (lbs)</label>
         <br>
-        <input id="bmi-weight" type="number" max="400" min="0">
+        <input id="bmi-weight" type="number" max="400" min="0" placeholder="0">
         <br>
     </form>
-    <br>
-        <button style="margin-bottom: 15px" value="Submit" onclick="calculateBMI()">Calculate My BMI</button>
+        <button class="bmi-button"style="margin-bottom: 15px" value="Submit" onclick="calculateBMI()">Calculate</button>
  
-    <h2 id="bmi-result"></h2>
-    <h2 id="form-footer"></h2>
-    <a href="https://www.cdc.gov/obesity/adult/defining.html" target="_blank"><p style="bottom: 0; left: 2px; position: absolute; margin: 0 auto; font-size: xx-small; color: rgba(0, 0, 0, 0.486)">Classification Reference: https://www.cdc.gov/obesity/adult/defining.html</p></a>
+    <h2 class="tooltip" id="bmi-result"></h2>
+    <h1 id="form-footer"></h1>
+    <a href="https://www.cdc.gov/obesity/adult/defining.html" target="_blank"><p style="bottom: 0; left: 2px; position: absolute; margin: 0 auto; font-size: xx-small; color: rgba(0, 0, 0, 0.75); background-color: rgba(255,255,255,.5);">More Info/Reference: https://www.cdc.gov/obesity/adult/defining.html</p></a>
 </div>
 </section>
    <!-- Footer Section -->
