@@ -22,7 +22,8 @@ function slideShowCycle (e) {
    || document.location.href == 'https://sean-p040.github.io/index.html' && e.keyCode == '37'
    || document.location.href == 'https://sean-p040.github.io/MyWork.html'  && e.keyCode == '37'
    || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '37'
-   || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '37'){
+   || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '37'
+   || document.location.href == 'https://sean-p040.github.io/#top' && e.keyCode == '37'){
     //left arrow key -> prev slide
     plusSlides(-1)
   }
@@ -31,7 +32,8 @@ function slideShowCycle (e) {
     || document.location.href == 'https://sean-p040.github.io/index.html' && e.keyCode == '39'
     || document.location.href == 'https://sean-p040.github.io/MyWork.html' && e.keyCode == '39'
     || document.location.href == 'https://sean-p040.github.io/index.html#footer' && e.keyCode == '39'
-    || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '37'){ 
+    || document.location.href == 'https://sean-p040.github.io/index.html#top' && e.keyCode == '39'
+    || document.location.href == 'https://sean-p040.github.io/#top' && e.keyCode == '39'){ 
     //right arrow key -> next slide
     plusSlides(1)
    
