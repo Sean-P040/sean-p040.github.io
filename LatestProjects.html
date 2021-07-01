@@ -4,16 +4,16 @@
     
     <head>
         <title>Sean's Web Portfolio</title>
-        <script type="text/javascript" src="script.js">
-        </script>
+        
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="style1.css">
     </head>
 
 
 <body>
+
     <header>
-  <script src="script.js"></script>
+
   <nav class="nav">
     <ul id="navBar">
         <li><a href=index.html>Home</a></li>
@@ -45,10 +45,101 @@
         If you have any project/program ideas, feel free to send me a message!
     </p>
 </section>
+<!-- Binary Calculator-->
+<h2 style="text-align: center; margin-bottom: 15px; margin-top: 100px;">Binary Number Calculator</h2>
 
+<div id="binaryCalc-container">
+    <div id="res"></div>
+            <div id="btns" class="btnContainer">
+
+                <button id="btn0">0</button>
+                <button id="btn1">1</button>
+                <button id="btnClr">C</button>
+                <button id="btnEql">=</button>
+
+                <button id=btnSum>+</button>
+                <button id=btnSub>-</button>
+                <button id=btnMul>*</button>
+                <button id=btnDiv>/</button>
+
+            </div>
+            
+</div>
+<p style="margin-top: 50px;">This calculator takes binary numbers as input, converts them to decimal, evaluates the expression, then returns the result as a binary number.
+    For Example: The number 9 is represented as "1001" in binary. The input: "1001+1001" in this calculator is the equivalent to entering "9+9" in a traditional calculator.
+    The calculation is performed when the equals button is clicked (9+9=18), finally the result is returned back in binary form ('10010' in binary - which is the same as the number 18).
+    </p>
+    <script>  document.getElementById('btn0').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}0`
+    })
+    
+    document.getElementById('btn1').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}1`
+    })
+    
+    document.getElementById('btnClr').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = "";
+    })
+    
+    document.getElementById('btnSum').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}+`
+    })
+    
+    document.getElementById('btnSub').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}-`
+    })
+    
+    document.getElementById('btnMul').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}*`
+    })
+    
+    document.getElementById('btnDiv').addEventListener("click", function(){
+        document.getElementById('res').innerHTML = `${document.getElementById('res').innerHTML}/`
+    })
+  
+    let reOperators = new RegExp(/[*\-+/]/g)
+    let operator = "";
+    document.getElementById('btnEql').addEventListener("click", function(){
+  
+        let operation = document.getElementById('res').innerHTML;
+        if (operation.includes('*')){
+            operator = '*';
+        } else if (operation.includes('/')){
+            operator = '/';
+        } else if (operation.includes('+')){
+            operator = '+';
+        } else if (operation.includes('-')){
+            operator = '-';
+        }
+    
+        let arr = operation.split(reOperators)
+        let v1 = arr[0];
+        let v2 = arr[1];
+        let dec1 = 0;
+        let dec2 = 0;
+        //convert values to decimal
+        try{
+        for (let i = 0; i < v1.length; i++) {
+            dec1 *= 2; 
+            dec1 += +v1[i];
+        }
+        for (let i = 0; i < v2.length; i++) {
+            dec2 *= 2;
+            dec2 += +v2[i];
+        }
+        
+        let evalArray = [dec1, operator, dec2].join("").toString()
+        let decResult = (eval(evalArray))
+        document.getElementById('res').innerHTML = (decResult >>> 0).toString(2);
+      } catch (e){
+        console.log(e,"Binary calculator unexpected input error")
+        document.getElementById('res').innerHTML = ""
+      }
+  
+    });</script>
 <!-- Badges-->
-<h2 style="text-align: center; margin-bottom: 10px;">HackerRank 10 Days of Javascript (6/30/2021) | Gold Level</h2>
-<a href="https://www.hackerrank.com/sean_p040" target="_blank">
+<h2 style="text-align: center; margin-bottom: 10px; margin-top: 100px;">HackerRank 10 Days of Javascript (6/30/2021) | Gold Level</h2>
+<a href="https://www.hackerrank.com/sean_p040" target="_blank" style="padding: 50px 50px">
 <img style="display: block; margin-left: auto; margin-right: auto;" src="images/jsbadge.png"></img>
 </a>
  <!-- BMI Calculator-->
@@ -109,7 +200,7 @@
             </div>
             <div>
                 <input type="submit" class="submit" value="Send" onclick="alert('Thank you! You will be redirected shortly and your message will be sent after passing the security check.')">
-                <script src="script.js"></script>
+
             </div>
         </fieldset>
     </form>
@@ -129,6 +220,8 @@
     <hr>
     <p id="copyright">&#169; by Sean Paul | Copyright 2021 | </p>
 </footer>
+<script type="text/javascript" src="script.js">
+</script>
 </body>
 
 </html>

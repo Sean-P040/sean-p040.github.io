@@ -16,7 +16,10 @@
         line-height: 2rem;
 
     }
- 
+    
+    #btns {
+        margin-left: 3px !important;
+    }
 
     h1#headerText {
         font-size: 2.5em;
@@ -993,5 +996,47 @@ color: white;
     margin-bottom: 8px;
     margin-top: 1px;
     background: aliceblue;
+}
+
+.btnContainer {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px; 
+}
+#res {
+    background-color: lightgray;
+    border: solid black 1px;
+    height: 48px;
+    font-size:36px;
+    min-width: 448px;
+    max-width: 598px;
+    padding-top:5px;
+    margin: 0 auto;
+    color: black;
+}
+
+#btns {
+width: 25%;
+height: 36px;
+font-size: 18px;
+margin: 0 auto;
+margin-left: 240px;
+float: left;
+
+}
+
+#btn0 , #btn1 {
+background-color: lightgreen;
+color: brown;
+
+}
+
+#btnClr , #btnEql {
+    background-color: darkgreen;
+    color: white;
+}
+
+#btnSum , #btnSub, #btnMul, #btnDiv {
+    background: black;
+    color: red;
 }
 
