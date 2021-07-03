@@ -68,14 +68,13 @@ label {
 #clock-item-hours, #clock-item-mins, #clock-item-secs {
     font-size: 36px;
     width: 50px;
-    height: 40px;
+    height: 35px;
     background: blue;
     color:white;
-    padding: 5 5;
     text-align: center;
     vertical-align:middle;
     margin-top: 0px;
-    padding-top: 5px;
+    padding-top: 10px;
     box-shadow: 5px 5px yellow;
 }
 
