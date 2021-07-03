@@ -7,6 +7,7 @@
         
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="style1.css">
+        <link rel="stylesheet" href="timerStyles.css">
     </head>
 
 
@@ -45,8 +46,125 @@
         If you have any project/program ideas, feel free to send me a message!
     </p>
 </section>
+<!--Alarm clock Timer-->
+<audio id="alarmTone">
+    <source src="alarm_clock1.mp3" type="audio/mp3">
+     </audio>
+<h2 class="header-text">Countdown Timer App</h2>
+<div id="timer-container" class="timer-container">
+   <div id="clock-input-labels">
+   <label>Hours</label>
+   <label>Minutes</label> 
+   <label>Seconds</label>
+</div> 
+   <div id="clock-input-items"> 
+       <input id="hours-input"   min="0" placeholder="00" type="number"></input>
+       <input id="minutes-input" min="0" placeholder="00" type="number"></input>
+       <input id="seconds-input" min="0" placeholder="00" type="number"></input>
+   </div>
+   <div id="clock-labels">
+       <label>Hours</label>
+       <label>Mins</label>
+       <label>Secs</label>
+   </div>
+   <div class="timer-clock">
+       <span id="clock-item-hours">00</span>
+       <span id="clock-item-mins">00</span>
+       <span id="clock-item-secs">00</span>
+   </div>
+   <div class="timer-buttons">
+       <button id="set-button">Set</button>
+       <button id="start-button" disabled onclick="timerStart = setInterval(startTimer, 1000)">Start</button>
+       <button id="pause-button" disabled onclick="pauseClick()">Pause</button>
+       <button id="reset-button">Reset</button>
+   </div>
+</div>
+<script>//console.log("script is running!")
+
+    document.getElementById("set-button").addEventListener("click", function(){
+        //console.log("setting the timer")
+        document.getElementById("start-button").disabled = false;
+        document.getElementById("set-button").disabled = true;
+        let newTimer = [
+            document.getElementById("clock-item-hours").innerHTML,
+            document.getElementById('clock-item-mins').innerHTML,
+            document.getElementById('clock-item-secs').innerHTML
+        ]
+        //console.log(`New Timer set to ${newTimer}`)
+    
+        let timerInput = [
+            document.getElementById('hours-input').value,
+            document.getElementById('minutes-input').value,
+            document.getElementById('seconds-input').value,
+        ]
+       
+    
+       //console.log(`timer input is ${timerInput}`)
+       document.getElementById("clock-item-hours").innerHTML = timerInput[0].padStart(2,"0")
+       document.getElementById("clock-item-mins").innerHTML = timerInput[1].padStart(2,"0")
+       document.getElementById("clock-item-secs").innerHTML = timerInput[2].padStart(2,"0")
+    })
+    
+        document.getElementById('reset-button').addEventListener("click", function(){
+        document.getElementById('timer-container').className = "timer-container"
+        document.getElementById("alarmTone").pause();
+        clearInterval(timerStart);
+        document.getElementById("start-button").disabled = true;
+        document.getElementById("pause-button").disabled = true;
+        document.getElementById("set-button").disabled = false;
+        //console.log("reset button pressed");
+        document.getElementById("clock-item-hours").innerHTML = "0".padStart(2, "0");
+        document.getElementById("clock-item-mins").innerHTML = "0".padStart(2, "0");
+        document.getElementById("clock-item-secs").innerHTML = "0".padStart(2, "0");
+    })
+    
+    /* document.getElementById('start-button').addEventListener("click", function(){
+    //console.log("start button pressed")
+       document.getElementById("clock-item-hours").innerHTML = eval(document.getElementById("clock-item-hours").innerHTML - 1)
+       
+    }) */
+    
+    
+    function startTimer() {
+        //logic needs to be improved
+        document.getElementById("start-button").disabled = true;
+        document.getElementById("pause-button").disabled = false;
+        if(document.getElementById("clock-item-hours").innerHTML <= 0){
+            document.getElementById("clock-item-hours").innerHTML = "00"
+        } if(document.getElementById("clock-item-mins").innerHTML <= 0){
+            if(document.getElementById("clock-item-hours").innerHTML != "00"){
+            document.getElementById("clock-item-mins").innerHTML = 59
+            document.getElementById("clock-item-hours").innerHTML = document.getElementById("clock-item-hours").innerHTML - 1;
+            }
+        } if (document.getElementById("clock-item-secs").innerHTML <= 0 ) {
+            if(document.getElementById("clock-item-mins").innerHTML != "00" && document.getElementById("clock-item-mins").innerHTML != 0 ){
+            document.getElementById("clock-item-secs").innerHTML = 59
+            document.getElementById("clock-item-mins").innerHTML = eval(document.getElementById("clock-item-mins").innerHTML - 1)
+            }
+        } else {
+      //  document.getElementById("clock-item-hours").innerHTML = eval(document.getElementById("clock-item-hours").innerHTML - 1)
+       // document.getElementById("clock-item-mins").innerHTML = eval(document.getElementById("clock-item-mins").innerHTML - 1)
+        document.getElementById("clock-item-secs").innerHTML = eval(document.getElementById("clock-item-secs").innerHTML - 1)
+        }
+        if(document.getElementById("clock-item-hours").innerHTML == "00" && document.getElementById("clock-item-mins").innerHTML == 0 && document.getElementById("clock-item-secs").innerHTML == 0){
+            clearInterval(timerStart)
+            document.getElementById("alarmTone").volume = ".1"
+            document.getElementById("alarmTone").loop = true;
+            document.getElementById("alarmTone").play();
+           // alert("Timer completed")
+            document.getElementById("pause-button").disabled = true;
+            document.getElementById('timer-container').className += " blink-bg"
+        }
+    }
+    
+    function pauseClick() {
+        clearInterval(timerStart);
+        document.getElementById("pause-button").disabled = true;
+        document.getElementById("start-button").disabled = false;
+    }
+    </script>
 <!-- Binary Calculator-->
-<h2 style="text-align: center; margin-bottom: 15px; margin-top: 100px;">Binary Number Calculator</h2>
+<h2 style="text-align: center; margin-bottom: 15px; margin-top: 50px;">Binary Number Calculator</h2>
 
 <div id="binaryCalc-container">
     <div id="res"></div>

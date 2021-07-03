@@ -1,0 +1,93 @@
+
+.header-text {
+    margin-top:25px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+label {
+    font-size: 20px;
+    color:azure
+}
+
+#clock-input-items {
+    display: inline-grid;
+    grid-template-columns: 175px 175px 175px;
+}
+
+.timer-container {
+    height: 185px;
+    width: 425px;
+    background: black;
+    margin: 0 auto;
+    padding: 5px 5px 5px 15px;
+    border: solid 1px black;
+    box-shadow: 5px 5px yellow;
+}
+#clock-input-labels {
+    display: inline-grid;
+    grid-template-columns: 175px 175px 175px;
+}
+.timer-container input {
+    display: inline-grid;
+    grid-template-columns: 175px 175px 175px;
+    width: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.timer-container button {
+    width: 75px;
+    height: 30px;
+}
+
+.timer-container span {
+    margin-top: 25px;
+}
+
+.timer-buttons {
+    margin-top: 25px;
+    display: inline-grid;
+    grid-template-columns: 112.5px 112.5px 112.5px 112.5px;
+}
+.timer-clock {
+    display: inline-grid;
+    grid-template-columns: 175px 175px 175px;
+    
+
+}
+
+#clock-labels {
+    margin-top: 10px;
+    display: inline-grid;
+    grid-template-columns: 175px 175px 175px;
+    margin-left:1px;
+    
+}
+
+
+#clock-item-hours, #clock-item-mins, #clock-item-secs {
+    font-size: 36px;
+    width: 50px;
+    height: 40px;
+    background: blue;
+    color:white;
+    padding: 5 5;
+    text-align: center;
+    vertical-align:middle;
+    margin-top: 0px;
+    padding-top: 5px;
+    box-shadow: 5px 5px yellow;
+}
+
+.blink-bg{
+    color: #fff;
+    animation: blinkingBackground 2s infinite;
+    box-shadow: 5px 5px black;
+}
+@keyframes blinkingBackground{
+    0%		{ background-color: #10c018;}
+    25%		{ background-color: #1056c0;}
+    50%		{ background-color: #ef0a1a;}
+    75%		{ background-color: #254878;}
+    100%	        { background-color: #04a1d5;}
+}
