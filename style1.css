@@ -81,14 +81,12 @@
         max-width: 100%;
         width: 100%;
         text-align: center;
-        padding-right: 20px;
-        
+     
     }
 
     ul#navBar {
         padding-left: 0;
     }
-
 
 
     .footerIcons img {
@@ -410,7 +408,7 @@ input:checked + .slider:before {
     color: rgb(255, 233, 170);
     font-size: 1.25em;
     white-space: nowrap;
-
+    margin-right: 25px;
 }
 
 ul#navBar.dark-mode a {
@@ -422,8 +420,10 @@ ul#navBar.dark-mode img {}
 .nav a {
     text-decoration: underline;
     font-size: smaller;
+}
 
-
+.nav {
+    margin-right: 25px;
 }
 
 section#MyServices {
