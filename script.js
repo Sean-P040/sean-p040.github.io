@@ -1,3 +1,4 @@
+
 function darkMode() {
     "use strict";
     var element = document.body;
@@ -51,6 +52,7 @@ if (time > 16) {
   greet = 'Good afternoon,';
 } else if (time >= 0) {
   greet = 'Good morning,';
+
 } else {
   greet = 'Greetings,';
 }
