@@ -46,6 +46,45 @@
         If you have any project/program ideas, feel free to send me a message!
     </p>
 </section>
+
+<!-- Sticky Note App-->
+<section>
+    <h2 style="text-align: center; margin-bottom: 5px;">Local Storage Sticky Note</h2>
+    <div class="sticky-note-container" id="stickyNote">
+        <label id="sticky-note-clear">x</label>
+        <input id="sticky-note-title-input" placeholder="Enter Title..." type="text"></input>
+
+        <textarea id="sticky-note-input" placeholder="Write a Note...It will be stored in your browser's local storage and will not exceed 5MB" type="textarea" maxlength="5000"></textarea>
+
+        <script>
+         document.getElementById("sticky-note-title-input").value = localStorage.getItem("sticky-note-title")
+            document.getElementById("sticky-note-title-input").addEventListener("change", function(){
+                let stickyTitleInput = document.getElementById("sticky-note-title-input").value;
+                if(stickyTitleInput != null || stickyTitleInput != undefined){
+                localStorage.setItem("sticky-note-title", stickyTitleInput)
+                }
+            })
+            document.getElementById("sticky-note-input").value = localStorage.getItem("sticky-note-body")
+            document.getElementById("sticky-note-input").addEventListener("change", function(){
+               
+                
+                let stickyInput = document.getElementById("sticky-note-input").value;
+                if(stickyInput != null || stickyInput != undefined){
+                localStorage.setItem("sticky-note-body", stickyInput)
+                }
+            })
+
+            document.getElementById("sticky-note-clear").addEventListener("click", function(){
+                let confirmInput = confirm("Are you sure you want to delete your sticky note?")
+                if(confirmInput == true){
+                localStorage.clear();
+                document.getElementById("sticky-note-input").value = null
+                document.getElementById("sticky-note-title-input").value = null 
+                }
+            })
+        </script>
+    </div>
+</section>
 <!--Alarm clock Timer-->
 <audio id="alarmTone">
     <source src="alarm_clock1.mp3" type="audio/mp3">
@@ -256,7 +295,7 @@
   
     });</script>
 <!-- Badges-->
-<h2 style="text-align: center; margin-bottom: 10px; margin-top: 55px;">HackerRank 10 Days of Javascript (6/30/2021) | Gold Level</h2>
+<h2 style="text-align: center; margin-bottom: 5px; margin-top: 55px;">HackerRank 10 Days of Javascript (6/30/2021) | Gold Level</h2>
 <a href="https://www.hackerrank.com/sean_p040" target="_blank" style="padding: 50px 50px">
 <img style="display: block; margin-left: auto; margin-right: auto;" src="images/jsbadge.png"></img>
 </a>

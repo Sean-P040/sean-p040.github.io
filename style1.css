@@ -1040,3 +1040,56 @@ color: brown;
     color: red;
 }
 
+.sticky-note-container {
+    margin: 0 auto;
+    width: 400px;
+    height: 350px;
+    background: paleturquoise;
+    padding: 5px 15px 15px 5px;
+    box-shadow:  rgba(0,0,0,.5) 5px 5px;
+    border-radius: 5%;
+}
+
+#sticky-note-input {
+    border:none;
+    height: 85%;
+    width: 100%;
+    background: paleturquoise;
+    border-radius: 5%;
+    resize: none;
+    padding: 5px 0px 2px 5px;
+    font-size:large;
+    outline: none;
+}
+
+#sticky-note-title-input {
+    top: -20px;
+    position: relative;
+    text-align: center;
+    border:none;
+    height: 8%;
+    width: 100%;
+    background: paleturquoise;
+    border-radius: 20%;
+    resize: none;
+    padding: 5px 5px 5px 5px;
+    padding-top: 0px;
+    font-size:x-large;
+    outline: none;
+}
+
+#sticky-note-clear {
+    position: relative;
+    color: gray;
+    left: 390px;
+    font-size: x-large;
+    z-index: 3;
+    padding: 2px;
+    padding-top: 0px;
+    text-decoration: underline;
+}
+
+#sticky-note-clear:hover {
+    color: red;
+    
+}
