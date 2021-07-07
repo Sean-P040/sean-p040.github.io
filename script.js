@@ -1,3 +1,5 @@
+//disables horizontal scrollbar during header slide-in animation
+setTimeout(function(){document.body.style.overflowX = "visible"}, 3000);
 
 function darkMode() {
     "use strict";

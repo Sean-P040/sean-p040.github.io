@@ -229,7 +229,7 @@ body {
     background-color: rgb(27, 38, 115);
     color: #FFE9AA;
     max-width: min-content;
-
+    overflow-x: hidden;
 }
 
 @keyframes slidein {
