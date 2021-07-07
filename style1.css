@@ -12,9 +12,8 @@
         display: grid;
         min-width: auto !important;
         margin-top: .5% !important;
-        overflow-x: hidden;
         line-height: 2rem;
-
+        
     }
 
     #btns {
@@ -510,7 +509,7 @@ nav {
 #SalaryCalc {
 
     display: table-cell;
-    background-image: url(images/salarycalc.jpg);
+    background-image: url(compressed_images/salarycalc.webp);
     background-size: 100% 100%;
     height: 240px;
     width: 240px;
@@ -522,7 +521,7 @@ nav {
 #rpm-crm {
 
     display: table-cell;
-    background-image: url(images/crm.jpg);
+    background-image: url(compressed_images/crm.webp);
     background-size: 100% 100%;
     height: 240px;
     width: 240px;
@@ -553,7 +552,7 @@ nav {
 #SurveyGUI {
 
     display: table-cell;
-    background-image: url(images/survey.jpg);
+    background-image: url(compressed_images/survey.webp);
     background-size: 100% 100%;
     height: 240px;
     width: 240px;
@@ -577,7 +576,7 @@ nav {
 #PayrollSystem {
 
     display: table-cell;
-    background-image: url(images/payroll.jpg);
+    background-image: url(compressed_images/payroll.webp);
     background-size: 100% 100%;
     height: 240px;
     width: 240px;
@@ -608,7 +607,7 @@ nav {
 
 #EmojiDict {
     display: table-cell;
-    background-image: url(images/EmojiDictionary.jpg);
+    background-image: url(compressed_images/EmojiDictionary.webp);
     background-size: 100% 100%;
     height: 240px;
     width: 240px;
