@@ -1095,7 +1095,7 @@ color: brown;
 }
 
 #show-resume-button {
-    background-color: #111111; /* Green */
+    background-color: #111111; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -1105,8 +1105,9 @@ color: brown;
     font-size: 16px;
     margin: 1rem auto;
     cursor: pointer;
-    -webkit-transition-duration: 0.4s; /* Safari */
+    -webkit-transition-duration: ease 0.4s; /* Safari */
     transition-duration: 0.4s;
+    max-width: 15rem;
 }
 
 #show-resume-button:hover {
