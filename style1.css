@@ -1018,9 +1018,8 @@ color: white;
 width: 25%;
 height: 36px;
 font-size: 18px;
-margin: 0 auto;
 margin-left: 240px;
-
+float: left;
 
 }
 
