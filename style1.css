@@ -1092,7 +1092,7 @@ color: brown;
     
 }
 
-#show-resume-button {
+#show-resume-button, #download-resume-button {
     background-color: #111111; 
     border: none;
     color: white;
@@ -1108,7 +1108,7 @@ color: brown;
     max-width: 15rem;
 }
 
-#show-resume-button:hover {
+#show-resume-button:hover, #download-resume-button:hover {
     background-color: #D4B96B;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
   }
